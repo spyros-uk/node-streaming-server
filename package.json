@@ -1,0 +1,52 @@
+{
+  "name": "node-streaming-service",
+  "version": "1.0.0",
+  "description": "An app which streams video",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spyros-uk/express-mongo-app.git"
+  },
+  "keywords": [
+    "express",
+    "mongo",
+    "ssr",
+    "pug"
+  ],
+  "author": "Spyros Papaioannou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spyros-uk/express-mongo-app/issues"
+  },
+  "homepage": "https://github.com/spyros-uk/express-mongo-app#readme",
+  "scripts": {
+    "run:dev": "NODE_ENV=development npx nodemon",
+    "run:prod": "NODE_ENV=production npx nodemon",
+    "test": "test"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.5",
+    "babel-loader": "^8.1.0",
+    "dotenv": "^8.2.0",
+    "prettier": "^2.0.5"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.3"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "server.js",
+      "app",
+      "api",
+      "public",
+      "node_modules"
+    ],
+    "exec": "babel-node server.js"
+  }
+}
